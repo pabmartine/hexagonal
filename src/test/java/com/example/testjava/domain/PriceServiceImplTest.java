@@ -40,7 +40,7 @@ public class PriceServiceImplTest {
 		ObjectMapper objectMapper = new ObjectMapper();
 		objectMapper.setTimeZone(TimeZone.getTimeZone("Europe/Paris"));
 
-		Price price = objectMapper.readValue(json, Price.class);
+		Price price = objectMapper.readValue(json, Price.class); 
 
 		when(priceRepository.findAll(new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").parse("01/07/2020 00:00:00"), 1, 1))
 				.thenReturn(Arrays.asList(price));
