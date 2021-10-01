@@ -46,6 +46,7 @@ public class RestPricesController {
 	@ResponseStatus(HttpStatus.OK)
 	public List<PriceDto> findAll(@RequestParam @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm:ss") Date date,
 			@RequestParam int product, @RequestParam int brand) {
+		//TODO BORRAR ejemplo de comentario simple
 		log.info("Recibida petición en findAll con fecha {}, product {} y brand {}", date, product, brand);
 		return priceMapper.pricesToPriceDtos(priceService.findAll(date, product, brand));
 	}
@@ -61,6 +62,11 @@ public class RestPricesController {
 	@ResponseStatus(HttpStatus.OK)
 	public PriceDto findOne(@RequestParam @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm:ss") Date date,
 			@RequestParam int product, @RequestParam int brand) {
+		/*
+		 * TODO BORRAR
+		 * Ejemplo de comentario múltiple 
+		 * 
+		 */
 		log.info("Recibida petición en findOne con fecha {}, product {} y brand {}", date, product, brand);
 		return priceMapper.priceToPriceDto(priceService.findOne(date, product, brand));
 	}
