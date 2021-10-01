@@ -22,8 +22,8 @@ public interface H2Repository extends JpaRepository<H2PriceEntity, Integer> {
 	 * Returns all prices found due entry params
 	 * 
 	 * @param date      filter date
-	 * @param productId product id
-	 * @param brandId   brand id
+	 * @param productId the product id
+	 * @param brandId   the brand id
 	 * @param pageable  page object from spring
 	 * @return          list of prices
 	 */
